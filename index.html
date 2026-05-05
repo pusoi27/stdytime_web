@@ -165,18 +165,20 @@
       gap: 10px;
     }
     .logo-icon {
-      width: 36px;
-      height: 36px;
-      background: var(--green-mid);
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: .85rem;
-      font-weight: 800;
-      color: var(--white);
-      border: 2px solid rgba(255,255,255,.25);
-      flex-shrink: 0;
+    }
+    .logo-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
     .logo-text {
       font-size: 1.25rem;
@@ -1063,7 +1065,7 @@
 <nav class="navbar">
   <div class="navbar-inner">
     <div class="navbar-logo">
-      <div class="logo-icon">ST</div>
+      <div class="logo-icon"><img src="logo.png" alt="StdyTime logo" /></div>
       <div>
         <div class="logo-text">StdyTime</div>
         <div class="logo-sub">After School Center</div>
@@ -1078,7 +1080,6 @@
     </ul>
 
     <div class="navbar-cta">
-      <a href="https://stdytime.lemonsqueezy.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding:9px 20px;color:#fff;border-color:rgba(255,255,255,.4);">Store</a>
       <a href="#pricing" class="btn btn-gold" style="padding:9px 20px;">Get Started</a>
     </div>
 
@@ -1104,10 +1105,6 @@
     <div class="hero-grid">
       <!-- Left copy -->
       <div>
-        <div class="hero-badge">
-          <span class="hero-badge-dot"></span>
-          Now available — Version 00.03.48
-        </div>
         <h1 class="hero-title">
           The smarter way to run your
           <span>After School Center</span>
@@ -1117,7 +1114,7 @@
           library tracking, and staff coordination — all in one beautifully simple platform.
         </p>
         <div class="hero-actions">
-          <a href="https://stdytime.lemonsqueezy.com" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-lg">
+          <a href="#pricing" class="btn btn-gold btn-lg">
             ⚡ Get StdyTime
           </a>
           <a href="#showcase" class="btn btn-lg" style="background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.3);color:#fff;">
@@ -1127,7 +1124,11 @@
         <div class="hero-stats">
           <div>
             <div class="hero-stat-val">100%</div>
-            <div class="hero-stat-lbl">Web-based</div>
+            <div class="hero-stat-lbl">Local-machine-based</div>
+          </div>
+          <div>
+            <div class="hero-stat-val">Data</div>
+            <div class="hero-stat-lbl">Never Shared</div>
           </div>
           <div>
             <div class="hero-stat-val">∞</div>
@@ -1136,6 +1137,18 @@
           <div>
             <div class="hero-stat-val">Live</div>
             <div class="hero-stat-lbl">Seat Tracking</div>
+          </div>
+          <div>
+            <div class="hero-stat-val">Parent Notification</div>
+            <div class="hero-stat-lbl">Email Based</div>
+          </div>
+          <div>
+            <div class="hero-stat-val">Books</div>
+            <div class="hero-stat-lbl">Library System</div>
+          </div>
+          <div>
+            <div class="hero-stat-val">Materials</div>
+            <div class="hero-stat-lbl">Inventory Management</div>
           </div>
           <div>
             <div class="hero-stat-val">QR</div>
@@ -1223,6 +1236,40 @@
 </div>
 
 <!-- ╔══════════════════════════════════════════╗ -->
+<!-- ║           HOW IT WORKS                   ║ -->
+<!-- ╚══════════════════════════════════════════╝ -->
+<section class="section how-it-works">
+  <div class="container">
+    <div class="section-label">Simple setup</div>
+    <h2 class="section-title">Up and running in minutes</h2>
+    <p class="section-sub">No complex configuration. No IT department needed. Just open your application and start managing your center.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-title">Add Your Students</div>
+        <p class="step-desc">Enter students manually or bulk-import from a CSV file. Set subjects, classification, and weekly schedule.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-title">Configure Your Schedule</div>
+        <p class="step-desc">Set open days, assign staff, and let the center calendar populate automatically from student schedules.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-title">Start Each Session</div>
+        <p class="step-desc">Students check in, get seated, and begin studying. The live view shows you who's active and what they're working on.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-title">Review &amp; Report</div>
+        <p class="step-desc">End-of-day reports, attendance logs, and library status — always up to date, always printable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════════════╗ -->
 <!-- ║              FEATURES                    ║ -->
 <!-- ╚══════════════════════════════════════════╝ -->
 <section class="section features" id="features">
@@ -1259,8 +1306,8 @@
 
       <div class="feature-card">
         <div class="feature-icon">📚</div>
-        <div class="feature-title">Library Book Tracking</div>
-        <p class="feature-desc">Manage your center's book inventory. Log loans, track returns, and never lose a book again with the built-in library management module.</p>
+        <div class="feature-title">Library Book and Materials Tracking</div>
+        <p class="feature-desc">Manage your center's book and material inventory. Log loans, track returns, and never lose a book or a tablet again with the built-in library and inventory management module.</p>
       </div>
 
       <div class="feature-card">
@@ -1269,40 +1316,6 @@
         <p class="feature-desc">Generate attendance reports, student progress snapshots, and center utilization stats. Print or save as PDF in one click.</p>
       </div>
 
-    </div>
-  </div>
-</section>
-
-<!-- ╔══════════════════════════════════════════╗ -->
-<!-- ║           HOW IT WORKS                   ║ -->
-<!-- ╚══════════════════════════════════════════╝ -->
-<section class="section how-it-works">
-  <div class="container">
-    <div class="section-label">Simple setup</div>
-    <h2 class="section-title">Up and running in minutes</h2>
-    <p class="section-sub">No complex configuration. No IT department needed. Just open your browser and start managing your center.</p>
-
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-title">Add Your Students</div>
-        <p class="step-desc">Enter students manually or bulk-import from a CSV file. Set subjects, classification, and weekly schedule.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-title">Configure Your Schedule</div>
-        <p class="step-desc">Set open days, assign staff, and let the center calendar populate automatically from student schedules.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-title">Start Each Session</div>
-        <p class="step-desc">Students check in, get seated, and begin studying. The live view shows you who's active and what they're working on.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">4</div>
-        <div class="step-title">Review &amp; Report</div>
-        <p class="step-desc">End-of-day reports, attendance logs, and library status — always up to date, always printable.</p>
-      </div>
     </div>
   </div>
 </section>
@@ -1475,37 +1488,21 @@
 <section class="section pricing" id="pricing">
   <div class="container">
     <div class="section-label">Simple pricing</div>
-    <h2 class="section-title">One platform, built for your center</h2>
-    <p class="section-sub">No hidden fees. No per-student charges. Just straightforward pricing that grows with you.</p>
+    <h2 class="section-title">Free trial for 60 days</h2>
+    <p class="section-sub">Cancel anytime during trial period</p>
 
     <div class="pricing-grid">
 
-      <div class="price-card">
-        <div class="price-tier">Starter</div>
-        <div class="price-amount"><sup>$</sup>0</div>
-        <div class="price-period">Free forever — up to 10 students</div>
-        <ul class="price-features">
-          <li><div class="pf-check">✓</div> Student profiles &amp; schedules</li>
-          <li><div class="pf-check">✓</div> Center calendar view</li>
-          <li><div class="pf-check">✓</div> Live seating (up to 10 seats)</li>
-          <li><div class="pf-check">✓</div> CSV export</li>
-          <li><div class="pf-check disabled">✗</div> Staff scheduling</li>
-          <li><div class="pf-check disabled">✗</div> Library management</li>
-          <li><div class="pf-check disabled">✗</div> Advanced reports</li>
-        </ul>
-        <a href="#contact" class="btn btn-outline" style="width:100%;justify-content:center;">Start Free</a>
-      </div>
-
       <div class="price-card featured">
         <div class="price-badge">Most Popular</div>
-        <div class="price-tier">Professional</div>
-        <div class="price-amount"><sup>$</sup>29</div>
-        <div class="price-period">per month · unlimited students</div>
+        <div class="price-tier">Per Month - one local machine</div>
+        <div class="price-amount"><sup>$</sup>7.89</div>
+        <div class="price-period">Save with annual subscription of $78.89</div>
         <ul class="price-features">
           <li><div class="pf-check">✓</div> Everything in Starter</li>
           <li><div class="pf-check">✓</div> Unlimited students</li>
           <li><div class="pf-check">✓</div> Staff scheduling calendar</li>
-          <li><div class="pf-check">✓</div> Library book tracking</li>
+          <li><div class="pf-check">✓</div> Library book and materials tracking</li>
           <li><div class="pf-check">✓</div> QR code student cards</li>
           <li><div class="pf-check">✓</div> PDF report generation</li>
           <li><div class="pf-check">✓</div> Priority email support</li>
@@ -1515,23 +1512,23 @@
         </a>
       </div>
 
-      <div class="price-card">
-        <div class="price-tier">Center+</div>
-        <div class="price-amount"><sup>$</sup>79</div>
-        <div class="price-period">per month · multi-location</div>
+      <div class="price-card featured">
+        <div class="price-tier">Per Month - two or more local machines</div>
+        <div class="price-amount"><sup>$</sup>12.64</div>
+        <div class="price-period">Save with annual subscription of $126.40</div>
         <ul class="price-features">
-          <li><div class="pf-check">✓</div> Everything in Professional</li>
-          <li><div class="pf-check">✓</div> Multi-location support</li>
-          <li><div class="pf-check">✓</div> Custom branding</li>
-          <li><div class="pf-check">✓</div> API access</li>
-          <li><div class="pf-check">✓</div> Dedicated onboarding</li>
-          <li><div class="pf-check">✓</div> White-glove migration</li>
-          <li><div class="pf-check">✓</div> Phone &amp; chat support</li>
+          <li><div class="pf-check">✓</div> Everything in Starter</li>
+          <li><div class="pf-check">✓</div> Unlimited students</li>
+          <li><div class="pf-check">✓</div> Staff scheduling calendar</li>
+          <li><div class="pf-check">✓</div> Library book and materials tracking</li>
+          <li><div class="pf-check">✓</div> QR code student cards</li>
+          <li><div class="pf-check">✓</div> PDF report generation</li>
+          <li><div class="pf-check">✓</div> Priority email support</li>
         </ul>
-        <a href="#contact" class="btn btn-cyan" style="width:100%;justify-content:center;color:#fff;">Contact Sales</a>
+        <a href="https://stdytime.lemonsqueezy.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width:100%;justify-content:center;">
+          Buy on Lemon Squeezy →
+        </a>
       </div>
-
-    </div>
 
     <!-- Download Product Placeholder -->
     <div class="download-box">
@@ -1790,7 +1787,7 @@
           </div>
         </div>
         <p class="footer-brand-desc">
-          StdyTime is a web-based management platform designed specifically for after-school centers, tutoring programs, and learning pods. Simple, powerful, and built by educators for educators.
+          StdyTime is a local-machine-based management platform designed specifically for after-school centers, tutoring programs, and learning pods. Simple, powerful, and built by educators for educators.
         </p>
         <div class="social-links">
           <a class="social-icon" href="#" aria-label="Twitter">𝕏</a>
