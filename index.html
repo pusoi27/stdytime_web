@@ -426,6 +426,23 @@
       color: var(--white);
     }
 
+    /* ─── Video Demo ─────────────────────────────────────────── */
+    .video-demo { background: var(--green-pale); }
+    .video-wrapper {
+      margin-top: 48px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      background: #000;
+      max-width: 860px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .video-wrapper video {
+      width: 100%;
+      display: block;
+    }
+
     /* ─── Features ───────────────────────────────────────────── */
     .features { background: var(--white); }
     .features-grid {
@@ -1265,6 +1282,23 @@
         <div class="step-title">Review &amp; Report</div>
         <p class="step-desc">End-of-day reports, attendance logs, and library status — always up to date, always printable.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════════════╗ -->
+<!-- ║              VIDEO DEMO                  ║ -->
+<!-- ╚══════════════════════════════════════════╝ -->
+<section class="section video-demo" id="demo">
+  <div class="container">
+    <div class="section-label">See it in action</div>
+    <h2 class="section-title">Watch StdyTime work for you</h2>
+    <p class="section-sub">QR check-ins, live dashboards, and instant parent alerts — see how StdyTime runs your learning center effortlessly.</p>
+    <div class="video-wrapper">
+      <video controls preload="metadata" poster="">
+        <source src="stdytime-demo.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </div>
   </div>
 </section>
